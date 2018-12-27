@@ -6,9 +6,9 @@ node {
     
     sh "git rev-parse --short HEAD > commit-id"
 
-    tag = readFile('commit-id').replace("\n", "").replace("\r", "")
+    tag = "1.0.0"
     appName = "hello-kenzan"
-    registryHost = "172.16.21.253:10080/library/"
+    registryHost = "wangjin"
     imageName = "${registryHost}${appName}:${tag}"
     env.BUILDIMG=imageName
 
